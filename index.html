@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>Dark or light</title>
+	</head>
+	<body>
+		<!-- 表示を切り替えてみたい要素  -->
+		<!--light modeだけで見せたい部分-->
+		<p class="msg light">light mode</p>
+		<p class="msg light">おはようございます！</p>
+		<p class="msg light">明るいです。</p>
+
+		<!--dark modeだけで見せたい部分-->
+		<p class="msg dark">dark mode</p>
+		<p class="msg dark">こんばんは。</p>
+		<p class="msg dark">落ち着いたトーンです。</p>
+
+		<!--共通部分-->
+		<p class="msg">こんにちは！</p>
+		<p class="msg">モードに合わせて変化します。</p>
+
+		<!-- モード切替スイッチ -->
+		<div class="switch">
+			<label class="switch-label">
+				<input type="checkbox" id="js_mode_toggle" />
+				<span class="switch-mode" id="js_rotate"></span>
+			</label>
+		</div>
+
+		<script src="./js/script.js"></script>
+	</body>
+</html>
