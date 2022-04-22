@@ -64,6 +64,61 @@ body {
 	}
 }
 
+.c-timeline1 {
+	margin-left: 14px;
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		left: -2px;
+		top: 10px;
+		bottom: 0;
+		width: 2px;
+		background: #999;
+	}
+
+	&__list {
+		display: block;
+		position: relative;
+		padding-left: 24px;
+		+ li {
+			margin-top: 32px;
+		}
+		&:last-of-type:before {
+			content: "";
+			position: absolute;
+			left: -2px;
+			width: 2px;
+			height: 100%;
+			background: $c-base-dark;
+		}
+	}
+
+	&__dot {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 4px solid #333;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		top: 2px;
+		left: -9px;
+		background-color: #999;
+	}
+	&__time {
+	}
+	&__content {
+		// padding: 8px 0;
+		h3 {
+			// font-size: 18px;
+			font-weight: bold;
+			margin: 8px 0 8px;
+		}
+	}
+}
+
 /* モード切り替えボタン */
 .c-switch-mode {
 	position: fixed;
