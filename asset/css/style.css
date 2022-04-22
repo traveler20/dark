@@ -3,66 +3,73 @@
 body {
   margin: 0;
   padding: 1em 2em;
-  color: #aaae8d;
-  background-color: #1d1d2c;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   transition-property: color, background-color;
+  color: #fff;
+  background-color: #333;
 }
-
-.msg {
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.dark {
-  display: block;
-}
-
-.light {
-  display: none;
+body.is_light {
+  color: #333;
+  background-color: #fff;
 }
 
 /*↑一応デバイスのテーマで切り替えられるように設定↓*/
 @media (prefers-color-scheme: light) {
-  .dark {
-    display: none;
-  }
-
-  .light {
-    display: block;
+  body {
+    color: #333;
+    background-color: #fff;
   }
 }
-/* ライトモードのとき */
-.js-mode-light {
-  color: #000;
-  background-color: whitesmoke;
+.c-timeline {
+  list-style: none;
+  /* for Desktop */
 }
-
-.js-mode-light .light {
-  display: block;
+.c-timeline__list {
+  margin-bottom: 60px;
 }
-
-.js-mode-light .dark {
-  display: none;
+@media (min-width: 640px) {
+  .c-timeline__list {
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+  }
+  .c-timeline__date {
+    width: 110px;
+    float: left;
+    margin-top: 20px;
+  }
+  .c-timeline__content {
+    width: 75%;
+    float: left;
+    border-left: 3px #e5e5d1 solid;
+    padding-left: 30px;
+  }
+  .c-timeline__content:before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: #6fc173;
+    position: absolute;
+    left: 106px;
+    top: 24px;
+    border-radius: 100%;
+  }
 }
 
 /* モード切り替えボタン */
-input[type=checkbox] {
-  display: none;
-}
-
-.switch {
+.c-switch-mode {
   position: fixed;
   top: 0.5em;
   right: 0.5em;
   font-size: 60px;
 }
-
-.switch-label {
+.c-switch-mode__label {
   cursor: pointer;
 }
-
-.switch-mode {
+.c-switch-mode__input {
+  display: none;
+}
+.c-switch-mode__mode {
   position: absolute;
   top: -120px;
   right: -120px;
@@ -72,18 +79,14 @@ input[type=checkbox] {
   transform: rotate(0);
   transition: transform 1s;
 }
-
-/* 月と太陽を対角線上に設置しておく。
-     設定したspanを回したら太陽がひっくり返ってしまったので、transform scaleで上下反転した */
-.switch-mode::before {
+.c-switch-mode__mode::before {
   content: "🌙";
   position: absolute;
   left: 0;
   bottom: 0;
 }
-
-.switch-mode::after {
-  content: "🌄";
+.c-switch-mode__mode::after {
+  content: "🌼";
   position: absolute;
   right: 0;
   top: 0;

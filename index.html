@@ -3,30 +3,57 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- reset.css destyle -->
+		<!-- <link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
+		/> -->
 		<link rel="stylesheet" href="./../asset/css/style.min.css" />
 		<title>Dark or light</title>
 	</head>
 	<body>
-		<!-- 表示を切り替えてみたい要素  -->
-		<!--light modeだけで見せたい部分-->
-		<p class="msg light">light mode</p>
-		<p class="msg light">おはようございます！</p>
-		<p class="msg light">明るいです。</p>
-
-		<!--dark modeだけで見せたい部分-->
-		<p class="msg dark">dark mode</p>
-		<p class="msg dark">こんばんは。</p>
-		<p class="msg dark">落ち着いたトーンです。</p>
-
 		<!--共通部分-->
-		<p class="msg">こんにちは！</p>
-		<p class="msg">モードに合わせて変化します。</p>
+		<p>こんにちは！</p>
+		<p>モードに合わせて変化します。</p>
+		<ul class="c-timeline">
+			<li class="c-timeline__list">
+				<p class="c-timeline__date">2007年2月</p>
+				<div class="c-timeline__content">
+					<h3>カナダでワーキングホリデー</h3>
+					<p>
+						ワーホリビザで渡加。アクセサリーショップ等でバイト。カナダ生活を満喫。
+					</p>
+				</div>
+			</li>
+			<li class="c-timeline__list">
+				<p class="c-timeline__date">2008年3月</p>
+				<div class="c-timeline__content">
+					<h3>Webの専門学校に入学</h3>
+					<p>
+						有給インターンシップ付きの一年プログラムを受講。HTML、CSS、JavaScript、PHP等のコーディングやWebデザインの基礎を学ぶ。
+					</p>
+				</div>
+			</li>
+			<li class="c-timeline__list">
+				<p class="c-timeline__date">2009年2月</p>
+				<div class="c-timeline__content">
+					<h3>バンクーバーのWeb制作会社でWebデザイナーとして働く</h3>
+					<p>
+						私以外全員カナダ人という環境で英語やWebの技術を学びながら必死に働く
+					</p>
+				</div>
+			</li>
+		</ul>
 
 		<!-- モード切替スイッチ -->
-		<div class="switch">
-			<label class="switch-label">
-				<input type="checkbox" id="js_mode_toggle" />
-				<span class="switch-mode" id="js_rotate"></span>
+		<div class="c-switch-mode">
+			<label class="c-switch-mode__label">
+				<input
+					type="checkbox"
+					class="c-switch-mode__input"
+					id="js_mode_toggle"
+				/>
+				<span class="c-switch-mode__mode" id="js_rotate"></span>
 			</label>
 		</div>
 

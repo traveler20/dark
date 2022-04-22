@@ -1,7 +1,7 @@
 // 要素やクラスを指定しておく
 const checkToggle = document.getElementById("js_mode_toggle");
 const rotateIcon = document.getElementById("js_rotate");
-const classLight = "js-mode-light";
+const classLight = "is_light";
 
 // デバイスがライトモードかどうかチェック
 const isLight = window.matchMedia("(prefers-color-scheme: light)").matches;
