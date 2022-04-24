@@ -3,53 +3,87 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta property="og:type" content="website" />
+		<title>traveler20</title>
+		<meta name="description" content="traveler20のサイトです。" />
+		<meta property="og:title" content="traveler20" />
+		<meta property="og:description" content="traveler20のサイトです。" />
+		<meta property="og:url" content="https://traveler20.github.io/" />
+		<!-- ogp-image -->
+		<meta
+			property="og:image"
+			content="https://traveler20.github.io/asset/img/ogp.webp"
+		/>
+		<meta property="og:locale" content="ja_JP" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@traveler20site" />
+		<link rel="icon" type="image/x-icon" href="./asset/img/meta/favicon.ico" />
 		<!-- reset.css destyle -->
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
 		/>
 		<link rel="stylesheet" href="./../asset/css/style.min.css" />
-		<title>Dark or light</title>
 	</head>
 	<body>
-		<!--共通部分-->
-		<p>こんにちは！</p>
-		<p>モードに合わせて変化します。</p>
-		<ul class="c-timeline">
-			<li class="c-timeline__list">
-				<div class="c-timeline__dot"></div>
-				<time class="c-timeline__time">2021.11</time>
-				<div class="c-timeline__content">
-					<h3>WEBデザイナーの転職</h3>
-					<p>
-						複素数体であれば、任意のCM-タイプのAは、実際、数体である定義体（英語版）(fieldofdefinition)を持つ。自己準同型環の可能なタイプは、対合（ロサチの対合（英語版）(Rosatiinvolution）をもつ環として既に分類される。
-					</p>
+		<header class="l-header">
+			<div class="l-header__inner">
+				<a class="l-header__logo" href="/">
+					<img src="./asset/img/meta/logo-icon.svg" alt="" />
+				</a>
+				<div class="c-switch-mode">
+					<label class="c-switch-mode__label">
+						<input
+							type="checkbox"
+							class="c-switch-mode__input"
+							id="js_mode_toggle"
+						/>
+						<span class="c-switch-mode__mode" id="js_rotate"></span>
+					</label>
 				</div>
-			</li>
-			<li class="c-timeline__list">
-				<div class="c-timeline__dot"></div>
-				<time class="c-timeline__time">2021.11</time>
-				<div class="c-timeline__content">
-					<h3>WEBデザイナーの転職</h3>
-					<p>
-						複素数体であれば、任意のCM-タイプのAは、実際、数体である定義体（英語版）(fieldofdefinition)を持つ。自己準同型環の可能なタイプは、対合（ロサチの対合（英語版）(Rosatiinvolution）をもつ環として既に分類される。
-					</p>
-				</div>
-			</li>
-			<li class="c-timeline__list">
-				<div class="c-timeline__dot"></div>
-				<time class="c-timeline__time">2021.11</time>
-				<div class="c-timeline__content">
-					<h3>WEBデザイナーの転職</h3>
-					<p>
-						複素数体であれば、任意のCM-タイプのAは、実際、数体である定義体（英語版）(fieldofdefinition)を持つ。自己準同型環の可能なタイプは、対合（ロサチの対合（英語版）(Rosatiinvolution）をもつ環として既に分類される。
-					</p>
-				</div>
-			</li>
-		</ul>
+			</div>
+		</header>
 
-		<!-- モード切替スイッチ -->
-		<div class="c-switch-mode">
+		<section class="l-section">
+			<div class="l-section__inner">
+				<h2 class="c-text-heading2">Timeline</h2>
+				<ul class="c-timeline">
+					<li class="c-timeline__list">
+						<div class="c-timeline__dot"></div>
+						<time class="c-timeline__time">2021.11</time>
+						<div class="c-timeline__content">
+							<h3>WEBデザイナーの転職</h3>
+							<p>
+								複素数体であれば、任意のCM-タイプのAは、実際、数体である定義体（英語版）(fieldofdefinition)を持つ。自己準同型環の可能なタイプは、対合（ロサチの対合（英語版）(Rosatiinvolution）をもつ環として既に分類される。
+							</p>
+						</div>
+					</li>
+					<li class="c-timeline__list">
+						<div class="c-timeline__dot"></div>
+						<time class="c-timeline__time">2021.11</time>
+						<div class="c-timeline__content">
+							<h3>WEBデザイナーの転職</h3>
+							<p>
+								複素数体であれば、任意のCM-タイプのAは、実際、数体である定義体（英語版）(fieldofdefinition)を持つ。自己準同型環の可能なタイプは、対合（ロサチの対合（英語版）(Rosatiinvolution）をもつ環として既に分類される。
+							</p>
+						</div>
+					</li>
+					<li class="c-timeline__list">
+						<div class="c-timeline__dot"></div>
+						<time class="c-timeline__time">2021.11</time>
+						<div class="c-timeline__content">
+							<h3>WEBデザイナーの転職</h3>
+							<p>
+								複素数体であれば、任意のCM-タイプのAは、実際、数体である定義体（英語版）(fieldofdefinition)を持つ。自己準同型環の可能なタイプは、対合（ロサチの対合（英語版）(Rosatiinvolution）をもつ環として既に分類される。
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- mode -->
+		<!-- <div class="c-switch-mode">
 			<label class="c-switch-mode__label">
 				<input
 					type="checkbox"
@@ -58,7 +92,7 @@
 				/>
 				<span class="c-switch-mode__mode" id="js_rotate"></span>
 			</label>
-		</div>
+		</div> -->
 
 		<script src="./asset/js/script.js"></script>
 	</body>
