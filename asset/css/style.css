@@ -38,6 +38,12 @@ body.is_light {
   background-color: #fff;
 }
 
+@media (prefers-color-scheme: light) {
+  body {
+    color: #333;
+    background-color: #fff;
+  }
+}
 img,
 video,
 object {
@@ -60,13 +66,16 @@ a:hover img {
   opacity: 0.8;
 }
 
-/*↑一応デバイスのテーマで切り替えられるように設定↓*/
-@media (prefers-color-scheme: light) {
-  body {
-    color: #333;
-    background-color: #fff;
-  }
+body {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
 }
+
+.l-main {
+  flex: 1;
+}
+
 .l-header {
   position: -webkit-sticky;
   position: sticky;
@@ -74,6 +83,7 @@ a:hover img {
   z-index: 2;
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
+  /* モード切り替えボタン */
 }
 .l-header__inner {
   max-width: 800px;
@@ -86,6 +96,50 @@ a:hover img {
 .l-header__logo {
   width: 24px;
 }
+.l-header__mode {
+  display: inline-block;
+  font-size: 32px;
+  width: 36px;
+  height: 48px;
+  position: relative;
+}
+.l-header__mode__label {
+  cursor: pointer;
+}
+.l-header__mode__input {
+  display: none;
+}
+.l-header__mode__mode {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 90px;
+  height: 106px;
+  transform: rotate(0);
+  transition: transform 1s;
+}
+.l-header__mode__mode::before {
+  content: "🌙";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.l-header__mode__mode::after {
+  content: "🌼";
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scale(1, -1);
+}
+
+.l-footer {
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 20px 20px;
+  background-color: #202225;
+  border-top: 1px solid rgba(239, 239, 239, 0.2);
+}
 
 .l-section {
   padding: 0;
@@ -93,7 +147,7 @@ a:hover img {
 .l-section__inner {
   max-width: 800px;
   margin: 0 auto;
-  padding: 120px 20px;
+  padding: 80px 20px;
 }
 
 .c-text-heading2 {
@@ -146,43 +200,5 @@ a:hover img {
 
 body.is_light .c-timeline__dot {
   border-color: #fff;
-}
-
-/* モード切り替えボタン */
-.c-switch-mode {
-  display: inline-block;
-  font-size: 32px;
-  width: 36px;
-  height: 48px;
-  position: relative;
-}
-.c-switch-mode__label {
-  cursor: pointer;
-}
-.c-switch-mode__input {
-  display: none;
-}
-.c-switch-mode__mode {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: block;
-  width: 90px;
-  height: 106px;
-  transform: rotate(0);
-  transition: transform 1s;
-}
-.c-switch-mode__mode::before {
-  content: "🌙";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-.c-switch-mode__mode::after {
-  content: "🌼";
-  position: absolute;
-  right: 0;
-  top: 0;
-  transform: scale(1, -1);
 }
 /*# sourceMappingURL=style.css.map */

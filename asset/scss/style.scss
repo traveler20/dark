@@ -40,6 +40,13 @@ body {
 		background-color: $c-base-light;
 	}
 }
+@media (prefers-color-scheme: light) {
+	body {
+		color: $c-body-light;
+		background-color: $c-base-light;
+	}
+}
+
 img,
 video,
 object {
@@ -62,12 +69,13 @@ a {
 	}
 }
 
-/*↑一応デバイスのテーマで切り替えられるように設定↓*/
-@media (prefers-color-scheme: light) {
-	body {
-		color: $c-body-light;
-		background-color: $c-base-light;
-	}
+body {
+	display: flex;
+	flex-flow: column;
+	min-height: 100vh;
+}
+.l-main {
+	flex: 1;
 }
 
 .l-header {
@@ -88,6 +96,55 @@ a {
 	&__logo {
 		width: 24px;
 	}
+
+	/* モード切り替えボタン */
+	&__mode {
+		// position: fixed;
+		// top: -24px;
+		// right: -24px;
+		display: inline-block;
+		font-size: 32px;
+		width: 36px;
+		height: 48px;
+		position: relative;
+		&__label {
+			cursor: pointer;
+		}
+		&__input {
+			display: none;
+		}
+		&__mode {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			display: block;
+			width: 90px;
+			height: 106px;
+			transform: rotate(0);
+			transition: transform 1s;
+			&::before {
+				content: "🌙";
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+			&::after {
+				content: "🌼";
+				position: absolute;
+				right: 0;
+				top: 0;
+				transform: scale(1, -1);
+			}
+		}
+	}
+}
+
+.l-footer {
+	font-size: 1.4rem;
+	text-align: center;
+	padding: 20px 20px;
+	background-color: #202225;
+	border-top: 1px solid rgba($color: #efefef, $alpha: 0.2);
 }
 
 .l-section {
@@ -95,7 +152,7 @@ a {
 	&__inner {
 		max-width: 800px;
 		margin: 0 auto;
-		padding: 120px 20px;
+		padding: 80px 20px;
 	}
 }
 
@@ -159,47 +216,8 @@ a {
 		}
 	}
 }
+
+// ライトモード
 body.is_light .c-timeline__dot {
 	border-color: $c-base-light;
-}
-
-/* モード切り替えボタン */
-.c-switch-mode {
-	// position: fixed;
-	// top: -24px;
-	// right: -24px;
-	display: inline-block;
-	font-size: 32px;
-	width: 36px;
-	height: 48px;
-	position: relative;
-	&__label {
-		cursor: pointer;
-	}
-	&__input {
-		display: none;
-	}
-	&__mode {
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		display: block;
-		width: 90px;
-		height: 106px;
-		transform: rotate(0);
-		transition: transform 1s;
-		&::before {
-			content: "🌙";
-			position: absolute;
-			left: 0;
-			bottom: 0;
-		}
-		&::after {
-			content: "🌼";
-			position: absolute;
-			right: 0;
-			top: 0;
-			transform: scale(1, -1);
-		}
-	}
 }
