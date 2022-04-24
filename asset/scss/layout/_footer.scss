@@ -1,9 +1,12 @@
 /* footer
 ────────────────────────────── */
+@use "./../foundation/system" as *;
+
 .l-footer {
 	font-size: 1.4rem;
 	text-align: center;
 	padding: 20px 20px;
-	background-color: #202225;
-	border-top: 1px solid rgba($color: #efefef, $alpha: 0.2);
+	color: $c-body-dark;
+	background-color: $c-black;
+	border-top: $c-border;
 }

@@ -389,7 +389,7 @@ a:hover img {
   z-index: 2;
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(239, 239, 239, 0.2);
+  border-bottom: 0.5px solid rgba(153, 153, 153, 0.5);
   /* モード切り替えボタン */
 }
 .l-header__inner {
@@ -447,8 +447,9 @@ a:hover img {
   font-size: 1.4rem;
   text-align: center;
   padding: 20px 20px;
+  color: #fff;
   background-color: #202225;
-  border-top: 1px solid rgba(239, 239, 239, 0.2);
+  border-top: 0.5px solid rgba(153, 153, 153, 0.5);
 }
 
 /* main
@@ -471,15 +472,44 @@ body {
 .l-section__inner {
   max-width: 800px;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: 64px 20px;
 }
 
 /* text
 ────────────────────────────── */
+.c-text-heading1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
 .c-text-heading2 {
   font-size: 2.4rem;
   font-weight: 600;
   margin: 0 0 18px;
+}
+
+.c-text-gray {
+  color: #999;
+}
+
+/* block
+────────────────────────────── */
+.c-block-flex {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* picture
+────────────────────────────── */
+.c-picture {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+.c-picture__image {
+  border-radius: 20px;
+  background-color: #6fc173;
 }
 
 /* timeline
@@ -529,5 +559,11 @@ body {
 /* ライトモード */
 body.is_light .c-timeline__dot {
   border-color: #fff;
+}
+
+/* utility
+────────────────────────────── */
+.mb-9 {
+  margin-bottom: 36px;
 }
 /*# sourceMappingURL=style.css.map */

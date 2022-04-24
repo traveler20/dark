@@ -19,7 +19,7 @@
 			top: 10px;
 			bottom: 0;
 			width: 2px;
-			background: $c-border;
+			background: $c-gray;
 		}
 		&:last-of-type:before {
 			display: none;
@@ -36,7 +36,7 @@
 		border-radius: 50%;
 		top: 0px;
 		left: -9px;
-		background-color: $c-border;
+		background-color: $c-gray;
 		// darkmode
 		border: 4px solid $c-base-dark;
 		transition-duration: 0.5s;

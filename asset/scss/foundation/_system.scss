@@ -3,5 +3,12 @@ $c-base-light: #fff;
 $c-body-dark: #fff;
 $c-base-dark: #333;
 
-$c-border: #999;
+$c-black: #202225;
+$c-gray: #999;
+$c-border: 0.5px solid
+	rgba(
+		$color: #999,
+		$alpha: 0.5,
+	);
+
 $c-accent: #6fc173;

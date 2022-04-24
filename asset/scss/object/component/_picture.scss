@@ -1,0 +1,14 @@
+/* picture
+────────────────────────────── */
+@use "./../../foundation/system" as *;
+
+.c-picture {
+	display: block;
+	width: 100px;
+	height: 100px;
+
+	&__image {
+		border-radius: 20px;
+		background-color: $c-accent;
+	}
+}
