@@ -315,11 +315,11 @@ template {
 }
 
 ::-moz-selection {
-  background-color: #6fc173;
+  background-color: #999;
 }
 
 ::selection {
-  background-color: #6fc173;
+  background-color: #999;
 }
 
 *,
@@ -583,5 +583,9 @@ body.is_light .c-timeline__dot {
 ────────────────────────────── */
 .mb-9 {
   margin-bottom: 36px;
+}
+
+.text-xl {
+  font-size: 20px;
 }
 /*# sourceMappingURL=style.css.map */
