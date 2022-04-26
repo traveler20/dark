@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/* base
+────────────────────────────── */
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 /* reset
 ────────────────────────────── */
 /* 
@@ -311,11 +314,10 @@ template {
   display: none;
 }
 
-/* base
-────────────────────────────── */
 ::-moz-selection {
   background-color: #6fc173;
 }
+
 ::selection {
   background-color: #6fc173;
 }
@@ -498,6 +500,22 @@ body {
   display: flex;
   align-items: center;
   gap: 32px;
+}
+
+.c-block-lists__list {
+  position: relative;
+  padding-left: 24px;
+}
+.c-block-lists__list:before {
+  content: "※";
+  position: absolute;
+  left: 0;
+  content: "\e876";
+  font-family: "Material Icons";
+  font-weight: 900;
+}
+.c-block-lists__list + li {
+  margin-top: 8px;
 }
 
 /* picture
